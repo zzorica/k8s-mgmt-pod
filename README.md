@@ -25,7 +25,7 @@ root@172.17.0.2 $ myip
 ```
 
 ## use
-To quickly use container and jump into shell use:
+To quickly use container and jump into shell:
 - docker
 ```
 docker run -it --rm zzorica/k8s-mgmt-pod:latest
