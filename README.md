@@ -25,7 +25,7 @@ root@172.17.0.2 $ myip
 ```
 You can just call it without getting into container shell as well:
 ```
-kubectl run mgmt-pod --rm -i --tty --image zzorica/k8s-mgmt-pod:latest -- myip
+kubectl run mgmt-pod --rm -i --tty --restart=Never --image zzorica/k8s-mgmt-pod:latest -- myip
 ```
 
 ## use
@@ -36,7 +36,7 @@ docker run -it --rm zzorica/k8s-mgmt-pod:latest
 ```
 - kubernetes
 ```
-kubectl run mgmt-pod --rm -i --tty --image zzorica/k8s-mgmt-pod:latest
+kubectl run mgmt-pod --rm -i --tty --restart=Never --image zzorica/k8s-mgmt-pod:latest
 ```
 
 After you exit the pod/container it will get deleted in both envs.
