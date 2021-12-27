@@ -5,4 +5,4 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 COPY files/myip /usr/bin/
 COPY .bashrc /root/.bashrc
-CMD bash
+CMD ["bash"]
