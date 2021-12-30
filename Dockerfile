@@ -1,8 +1,8 @@
 FROM debian:stable-slim
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
-    curl dnsutils iputils-ping vim traceroute iproute2 wget2 telnet \
+    curl dnsutils iputils-ping vim traceroute iproute2 wget2 telnet postgresql-client mariadb-client \
     && rm -rf /var/lib/apt/lists/*
-COPY files/myip /usr/bin/
-COPY .bashrc /root/.bashrc
+COPY scripts/* /usr/bin/
+COPY files/.bashrc /root/.bashrc
 CMD ["bash"]
