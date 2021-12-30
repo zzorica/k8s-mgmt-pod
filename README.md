@@ -14,7 +14,7 @@ Tools installed:
 * mariadb-client
 
 ## prompt
-When in shell bash promt will show user@localIP
+When in shell bash prompt will show user@localIP
 ```
 root@172.17.0.2 $ 
 ```
@@ -41,7 +41,7 @@ root@172.17.0.2 $ db_alive mysql -h mariadb; echo $?
 error: 'Access denied for user 'root'@'10.244.0.33' (using password: NO)'
 0
 ```
-It is quite usefull to use in kubernetes for service DB dependency with initContainers. Your pod|pods wont start until DB is ready:
+It is quite usefull to use in kubernetes for service DB dependency with initContainers. Your pod|pods won't start until DB is ready:
 ```
       initContainers:
         - name: wait-for-db
