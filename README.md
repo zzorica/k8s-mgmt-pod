@@ -34,7 +34,7 @@ kubectl run mgmt-pod --rm -i --tty --restart=Never --image zzorica/k8s-mgmt-pod:
 ```
 * db_alive
 
-Check if your mysql or postgresql db is alive. Need only type of db and its address. It will get you exit code 0 if db is alive and 1|2 if not.
+Check if your mysql or postgresql db is alive. Need only type of db and its address. It will get you exit code 0 if db is alive (no matter that authentication failed for example) and 1|2 if not.
 ```
 root@172.17.0.2 $ db_alive mysql -h mariadb; echo $?
 /usr/bin/mysqladmin: connect to server at 'mariadb' failed
