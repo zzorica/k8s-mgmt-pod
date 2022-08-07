@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# define usage 
-display_usage() { 
-  echo "Run script providing DB type and host address." 
-  echo -e "\nUsage: $0 [mysql|psql] [host] \n" 
-} 
+# define usage
+display_usage() {
+  echo "Run script providing DB type and host address."
+  echo -e "\nUsage: $0 [mysql|psql] [host] \n"
+}
 
 # check if all arguments provided
-if [  $# -le 1 ]; then 
+if [  $# -le 1 ]; then
   display_usage
   exit 1
-fi 
- 
+fi
+
 # show help
-if [[ ( $# == "--help") ||  $# == "-h" ]]; then 
+if [[ ( $# == "--help") ||  $# == "-h" ]]; then
   display_usage
   exit 1
-fi 
+fi
 
 if [ $1 = "mysql" ]; then
   /usr/bin/mysqladmin ping --connect-timeout 3 -h $2

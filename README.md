@@ -2,7 +2,7 @@
 Container image based on debian-slim with all management tools needed to test in-cluster network, dns and other quick and simple checks.
 
 Tools installed:
-* curl 
+* curl
 * dnsutils
 * iputils-ping
 * vim
@@ -12,11 +12,13 @@ Tools installed:
 * telnet
 * postgresql-client
 * mariadb-client
+* tcpdump
+* whois
 
 ## prompt
 When in shell bash prompt will show user@localIP
 ```
-root@172.17.0.2 $ 
+root@172.17.0.2 $
 ```
 ## extra scripts
 
